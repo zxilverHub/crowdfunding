@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap');
+
+:root {
+    --moderate-cyan: hsl(176, 50%, 47%);
+    --dark-cyan: hsl(176, 72%, 28%);
+
+    --black: hsl(0, 0%, 0%);
+    --dark-gray: hsl(0, 0%, 48%);
+
+    --text: 1rem;
+
+    --weight-sm: 400;
+    --weight-md: 500;
+    --weight-lg: 700;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Commissioner', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    background-color: rgb(236, 236, 236);
+}
+
+#root {
+    width: 100%;
+}
+
+.title {
+    color: var(--black);
+    font-weight: var(--weight-lg);
+}
+
+.sub {
+    color: var(--dark-cyan);
+    font-weight: var(--weight-md);
+    font-size: 1rem;
+}
+
+.eyebrow {
+    color: var(--moderate-cyan);
+    font-weight: var(--weight-lg);
+    font-size: 1rem;   
+}
+
+.cta {
+    padding: 1rem 2rem;
+    background-color: var(--moderate-cyan);
+    border-radius: 30px;
+    color: white;
+    font-size: 1rem;
+    font-weight: var(--weight-md);
+
+    border: none;
+    outline: none;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.comp {
+    position: relative;
+
+    width: 100%;
+    padding: 2.5rem;
+    background-color: white;
+    box-shadow: 0 0 2px var(--moderate-cyan);
+    border-radius: 8px;
+}
+
+.cta:hover { background-color: var(--dark-cyan); }
+.cta:active { background-color: black; }
+
+.none { display: none; }
+.unavailable {
+    opacity: .6 !important;
+}

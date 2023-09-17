@@ -1,0 +1,45 @@
+#about {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.product-card {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    border-radius: 8px;
+    border: 1px solid var(--moderate-cyan);
+
+    & h4 {
+        font-size: 1.2rem;
+    }
+}
+
+.card-head,
+.card-cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-cta .title {
+    font-size: clamp(2rem, 3vw, 2.3rem);
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+@media (max-width: 600px) {
+    .product-card,
+    .card-head,
+    .card-cta {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .card-head { gap: .3rem; }
+    .card-cta { gap: 1rem; }
+}

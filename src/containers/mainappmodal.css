@@ -1,0 +1,195 @@
+.main-app-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-selection {
+    position: relative;
+
+    width: min(750px, 90%);
+    height: 600px;
+    max-height: 600px;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+
+    overflow-y: auto;
+}
+.main-selection::-webkit-scrollbar {
+    display: none;
+}
+
+.close-modal-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+h5 {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    margin-bottom: .5rem;
+}
+
+.text {
+    margin-bottom: 2rem;
+}
+
+.radio-label {
+    width: 100%;
+    border: 1px solid var(--moderate-cyan);
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+label {
+    width: 100%;
+    padding: 2rem;
+
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 1rem;
+
+    & input {
+        width: 40px;
+        height: 40px;
+        padding: .5rem;
+    }
+}
+
+.product-info {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+
+    .title {
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: all .3s ease;
+    }
+
+    .title:hover {
+        color: var(--moderate-cyan);
+    }
+}
+
+.left { margin-left: auto; }
+
+.pledge-input {
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-top: 1px solid var(--moderate-cyan);
+}
+
+.enter-txt {
+    color: var(--dark-cyan);
+    font-size: 1rem;
+    font-weight: var(--weight-sm);
+}
+
+.pledge-inputs {
+    display: flex;
+    gap: 1rem;
+}
+
+#amount::-webkit-inner-spin-button,
+#amount::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+#amount,
+.continue {
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: var(--weight-lg);
+}
+
+#amount {
+    position: relative;
+    width: 120px;
+    border: 2px solid var(--dark-cyan);
+    color: var(--black);
+    padding: 1rem 1.5rem 1rem 2.5rem;
+
+    background: url("../images/dollar-sign-solid.svg");
+    background-size: .6rem;
+    background-repeat: no-repeat;
+    background-position: 20% center;
+}
+
+.continue {
+    background-color: var(--moderate-cyan);
+    color: white;
+    transition: all .3s ease;
+}
+
+.continue:hover {
+    background-color: var(--dark-cyan);
+}
+
+.continue:active {
+    background-color: white;
+}
+
+@media (max-width: 600px) {
+    .main-selection {
+        max-height: none;
+        height: 90%;
+    }
+
+    .radio-label { padding: 1rem; }
+    .product-info { gap: .5rem; }
+    .left { margin-left: 0; }
+
+    label {
+        padding: .5rem;
+    }
+
+    .pledge-input {
+        align-items: center;
+        justify-content: center;
+        gap: .5rem;
+        padding: .5rem;
+    }
+    #amount,
+    .continue {
+        padding: .5rem;
+    }
+
+    #amount {
+        padding: .4rem .5rem .5rem 2.5rem;
+    }
+}
+
+.invalid {
+    outline: 3px solid red  !important;
+}

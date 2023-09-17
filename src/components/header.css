@@ -1,0 +1,105 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 60vh;
+    height: 60dvh;
+    margin: 0 auto;
+
+    background: url("../images/image-hero-desktop.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all .3s ease;
+    overflow: hidden;
+}
+
+nav {
+    width: 100%;
+    padding: 3rem 10%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.logo { z-index: 10; }
+
+.menus {
+    z-index: 10;
+    display: flex;
+    gap: 1rem;
+
+    & li {
+        padding: 2rem  1rem;
+    }
+
+    & li a {
+        color: white;
+        text-shadow: 0 2px 5px var(--dark-gray);
+        font-size: 1rem;
+    }
+}
+
+.hamburger {
+    z-index: 10;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: none;
+}
+
+@media ( max-width: 600px ) {
+    .header {
+        background: url("../images/image-hero-mobile.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .menus { 
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        
+        position: fixed;
+        top: 7rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+
+        width: 90%;
+        background-color: white;
+        border-radius: 8px;
+
+        & li {
+            padding-inline: 2rem;
+        }
+
+        & li a {
+            font-weight: var(--weight-md);
+            color: var(--black);
+            text-shadow: none;
+        }
+    }
+    .hamburger { display: block; }
+}
+
+.expand { display: flex !important;}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 8;
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.blur { filter: blur(5px); }
+.unclickable { pointer-events: none; }

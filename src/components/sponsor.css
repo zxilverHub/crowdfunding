@@ -1,0 +1,59 @@
+.sponsor {
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 9;
+}
+
+h1 { font-size: clamp(1.6rem, 2vw, 2rem); }
+
+.mastercraft-logo {
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sponsor-cta {
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.bookmark-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(234, 234, 234);
+    border-radius: 30px;
+    cursor: pointer;
+    
+    .bookmark-txt {
+        padding: 1rem 1.3rem 1rem 1rem;
+        color: var(--dark-cyan);
+        font-weight: var(--weight-lg);
+    }
+}
+
+@media (max-width: 600px) {
+    .sponsor {
+        padding: 2.5rem 2rem;
+    }
+    .sponsor-cta {
+        .cta {
+            width: 100%;
+        }
+    }
+    
+    .bookmark-btn {
+        .bookmark-txt {
+            display: none;
+        }
+    }
+}
